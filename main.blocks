@@ -1,0 +1,52 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="8`34G+w{3lIK_6pVVQuj">mySprite</variable><variable type="KIND_SpriteKind" id="@O}ca81XO|xXD2u[(-/e">Player</variable><variable type="KIND_SpriteKind" id="WV%W-Kmo:h+2=WPIyuwa">Projectile</variable><variable type="KIND_SpriteKind" id="QG~H%jkwHBs}$:u#^r.*">Food</variable><variable type="KIND_SpriteKind" id="6+NHHFIcJSQ4Z22v{JuI">Enemy</variable></variables><block type="pxt-on-start" id="p.+#Os|8wKF=SHqeeMau" x="10" y="0"><statement name="HANDLER"><block type="variables_set" id="ukZu6hx`%5t,x!v9YaYp"><field name="VAR" id="8`34G+w{3lIK_6pVVQuj">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="6b5N7.Ge~8D:e]~ZI]O["><value name="img"><shadow type="screen_image_picker" id="5G[GTI@zcq#YX#QOL%HZ"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . . f f 5 5 f f . . . . . 
+. . . . . f 2 2 2 2 f . . . . . 
+. . . . f e e e e e e f . . . . 
+. . . f f e 1 e e 1 e f f . . . 
+. . . f f e e e e e e f f . . . 
+. . f f f f . e e . f f f f . . 
+. . . f f . e 2 2 e . f f . . . 
+. . . f . . e 2 2 e . . f . . . 
+. . . . . . e 8 8 e . . . . . . 
+. . . . . . e . . e . . . . . . 
+. . . . . . e . . e . . . . . . 
+. . . . . . 2 . . 2 . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="xZ|CCv/d-vQEf#xQTHaz"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="YY7z?hsS1uFP_j{nS2RB"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="YA/r(.g/dGIt3njU]NrY"><field name="VAR" id="8`34G+w{3lIK_6pVVQuj">mySprite</field></block></value><value name="vx"><shadow type="math_number" id="?U`{6^;xKGJ~(M7%]Or/"><field name="NUM">150</field></shadow></value><value name="vy"><shadow type="math_number" id="bjYQR?k]fAkM008~c`-Q"><field name="NUM">150</field></shadow></value><next><block type="gamesetbackgroundcolor" id="jtbf#Ff/XifxhEG:nqX["><value name="color"><shadow type="colorindexpicker" id="*Q?h*GU#y{;(^kfy)*$1"><field name="index">0</field></shadow></value><next><block type="tilemap_editor" id="32z7I1$JW7rsdJW!x0K;"><field name="tilemap">tiles.createTilemap(hex`1000100000000000000000000000010400000100000500000101010001000100000000000101010101000000010000000100000000000000010000000100010000010000000301000000000000000101000100000001010000010101000000000001000100000000000100010000010000000000010101010001000000010100010101000000020100010101000001000000000000000101000000010000000000010000000001000000000101010000050100000000010101010101000001010101000000000000000000000000000000000004000100000101010100000101010001000001010001000000000001000000010000040000010000000000010000000000`, img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`, [myTiles.transparency16,sprites.dungeon.collectibleInsignia,sprites.dungeon.chestClosed,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleBlueCrystal,sprites.dungeon.chestOpen], TileScale.Sixteen)</field><next><block type="mapplaceonrandomtile" id="|d#P2ftaPw)w_`m3arN@"><value name="sprite"><block type="variables_get" id="a1xpgpU:D.rUrMl#}5co"><field name="VAR" id="8`34G+w{3lIK_6pVVQuj">mySprite</field></block></value><value name="tile"><shadow type="tileset_tile_picker" id="^Sr1+[i5X_V$yglK;#Sg"><field name="tile">sprites.dungeon.collectibleInsignia</field></shadow></value><next><block type="camerafollow" id="Fb?6(}hKU9;iS8=Th[uV"><value name="sprite"><block type="variables_get" id="`#ODfSSUX(y?VoZCLXxO"><field name="VAR" id="8`34G+w{3lIK_6pVVQuj">mySprite</field></block></value><next><block type="tilemap_editor" id="W,}J;7/TX*rVan?qx]LD"><field name="tilemap">tiles.createTilemap(hex`1000100001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101`, img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, [myTiles.transparency16,sprites.dungeon.darkGroundNorthWest0], TileScale.Sixteen)</field><next><block type="gamecountdown" id="0V)80peXE_-#{eG;vQtY"><value name="duration"><shadow type="math_number" id="Zbcr2CKHy#+u9]vb)@Lg"><field name="NUM">20</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spriteshittile" id=".bpufW(%t6hSG*7@yS@|" x="0" y="570"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="l!u#SRV0];ypaXh{w_4G"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="93,jf;qOyA]h)+qHNiG0"><field name="MEMBER">Player</field></shadow></value><value name="tile"><shadow type="tileset_tile_picker" id="(/4a/9}kKX13F#/Uq$7C"><field name="tile">sprites.dungeon.darkGroundNorthWest0</field></shadow></value><value name="HANDLER_DRAG_PARAM_location"><shadow type="argument_reporter_custom" id="KuTp_EskgUC,8-NMW5zB"><mutation typename="tiles.Location"/><field name="VALUE">location</field></shadow></value><statement name="HANDLER"><block type="gameOver" id="D=KmDR%P+_M,:nYOFr.C"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><field name="effect">effects.confetti</field><value name="win"><shadow type="toggleWinLose" id="6*xc_Tg~s=cQbd{O}-/%"><field name="win">true</field></shadow></value></block></statement></block></xml>
